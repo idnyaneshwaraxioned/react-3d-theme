@@ -5,10 +5,10 @@ import { OrbitControls } from "@react-three/drei";
 import Earth from "./components/Earth";
 
 function App() {
-  const container = document.querySelector(".container");
-  const colors = ["#fff", "#FC6400", "#0949F0"];
   useEffect(()=>{
-    for (let i = 0; i < 150; i++) {
+    const container = document.querySelector(".container");
+    const colors = ["#fff", "#FC6400", "#0949F0"];
+    for (let i = 0; i < 250; i++) {
         const particle = document.createElement("div");
         const bgColor = colors[Math.floor(Math.random() * colors.length)];
         particle.classList.add("particle");
@@ -19,7 +19,7 @@ function App() {
         particle.style.boxShadow = `0 0 10px ${bgColor},0 0 20px ${bgColor},0 0 40px ${bgColor}`;
         particle.style.animationDelay = `${i / 100}s`;
       }
-  },[container,colors])
+  },[])
   return (
     <>
       <div className="container">
