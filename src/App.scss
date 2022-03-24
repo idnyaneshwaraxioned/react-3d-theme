@@ -1,0 +1,57 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root{
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.particle {
+  width: 1.5px;
+  height: 1.5px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: blink 2s linear infinite;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.container h2 {
+  color: #fff;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  font-weight: bold;
+
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  100% {
+    opacity: 1;
+    width: 4px;
+    height: 4px;
+  }
+}
+Canvas{
+  position: relative;
+  z-index: 3;
+}
